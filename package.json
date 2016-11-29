@@ -1,0 +1,28 @@
+{
+  "name": "pitchfork_notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.handler",
+  "scripts": {
+    "start": "node cmd/run_local.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.7.7",
+    "bluebird": "^3.4.6",
+    "cheerio": "^0.22.0",
+    "co": "^4.6.0",
+    "ejs": "^2.5.2",
+    "lodash": "^4.17.2",
+    "request": "^2.79.0",
+    "striptags": "^2.1.1",
+    "thunkify": "^2.1.2",
+    "xml-js": "^0.9.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}

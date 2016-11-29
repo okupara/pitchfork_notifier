@@ -1,0 +1,15 @@
+{
+  "urlRssAlbum": "http://pitchfork.com/rss/reviews/albums/",
+  "aws": {
+    "accessKeyId": "[your access key]",
+    "secretAccessKey": "[your secret access key]",
+    "region": "[your region]",
+    "tableName": "pitchfork_admin",
+    "record_id": "ADMIN" 
+  },
+  "slack": {
+    "webhook_url": "[your webhook url]",
+    "trigger_word": "pfscore"
+  },
+  "score": 8.1
+}

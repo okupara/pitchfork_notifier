@@ -1,0 +1,4 @@
+{
+  "httpMethod": "POST",
+  "body": "channel_name=general&timestamp=1480364361.000132&user_id=U34U56DSL&user_name=hogehoge&text=pfscore+7.6&trigger_word=pfscore"
+}
