@@ -1,2 +1,2 @@
 # pitchfork_notifier
-This program notifies information of albums to a slack channel from Pitchfork when a score of album is higher than you set
+This program notifies information of albums in Pitchfork to a slack channel when the program find out albums which these scores are higher than you set.
