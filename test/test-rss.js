@@ -8,6 +8,7 @@ const fs = require('fs');
 const convert = require('xml-js');
 const _ = require('lodash');
 const service = require('../lib/service_crawl');
+const http = require('../lib/http');
 
 const readFile = promisify(fs.readFile);
 
@@ -17,8 +18,8 @@ describe('service_crawl',function () {
   it('#isHigherScore', function (done) {
     this.timeout(0);
     co(function *() {
-      const html = yield readFile('./test/test.html');
-      const result = service.checkHigherScore(6.0, html);
+      const res = yield http.get('http://pitchfork.com/reviews/albums/22561-death-certificate/');
+      const result = service.checkHigherScore(6.0, res.body);
       assert(result.score === 9.5, 'the score from html is higer than another value from a config and the function returns the higher value');
       assert(result.imageUrl.indexOf('http://') === 0, 'image url string looks like a url');
     })
