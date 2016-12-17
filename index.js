@@ -1,7 +1,5 @@
-'use strict';
 
-const app = require('./lib/app');
-
+import * as app from './lib/app';
 /**
  * This function is an entry point of this program.
  * It is called by API Gateway and Scheduled Trigger in Lambda Function.
@@ -11,18 +9,17 @@ const app = require('./lib/app');
  * @param {Function} callback
  */
 
-exports.handler = function (event, context, callback) {
+export const handler = (event, context, callback) => {
+
   if (!event || typeof(event) !== 'object' || Object.keys(event) === 0) {
     return callback('Please specify a command to run as event');
   }
+
   app.start(event, (error)=> {
     if (error) {
       return callback(error, 'error');
     }
     callback(null, 'end');
   });
+
 };
-
-
-
-
